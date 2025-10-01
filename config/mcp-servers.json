@@ -1,0 +1,103 @@
+{
+  "mcpServers": {
+    "context7": {
+      "name": "Context7 Documentation Server",
+      "description": "공식 문서 및 프레임워크 패턴 가이드 제공",
+      "command": "npx",
+      "args": ["@context7/context7-mcp"],
+      "env": {
+        "CONTEXT7_API_KEY": ""
+      },
+      "enabled": false,
+      "category": "documentation"
+    },
+    "morphllm": {
+      "name": "Morphllm Code Editor",
+      "description": "패턴 기반 코드 편집 및 대량 변환 도구",
+      "command": "npx",
+      "args": ["@morphllm/morphllm-server"],
+      "env": {
+        "MORPHLLM_TOKEN_LIMIT": "50000"
+      },
+      "enabled": false,
+      "category": "development"
+    },
+    "magic": {
+      "name": "21st Magic Component Builder",
+      "description": "현대적인 UI 컴포넌트 생성 도구",
+      "command": "npx",
+      "args": ["@21st-ui/code-magic-server"],
+      "env": {
+        "MAGIC_DESIGN_SYSTEM": "tailwind"
+      },
+      "enabled": false,
+      "category": "ui"
+    },
+    "playwright": {
+      "name": "Playwright Browser Automation",
+      "description": "브라우저 자동화 및 E2E 테스트 도구",
+      "command": "npx",
+      "args": ["mcp-server-playwright"],
+      "env": {
+        "PLAYWRIGHT_BROWSERS_PATH": "./browsers"
+      },
+      "enabled": false,
+      "category": "testing"
+    },
+    "filesystem": {
+      "name": "Filesystem Operations",
+      "description": "파일 시스템 작업 및 파일 관리",
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-filesystem"],
+      "env": {
+        "FILESYSTEM_ROOT": "./src"
+      },
+      "enabled": true,
+      "category": "system"
+    },
+    "github": {
+      "name": "GitHub Integration",
+      "description": "GitHub API 통합 및 저장소 관리",
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": ""
+      },
+      "enabled": false,
+      "category": "integration"
+    }
+  },
+  "settings": {
+    "autoStart": false,
+    "logLevel": "info",
+    "maxConcurrentServers": 5,
+    "healthCheckInterval": 30000,
+    "restartOnFailure": true,
+    "categories": {
+      "documentation": {
+        "description": "문서화 및 가이드 도구",
+        "color": "#3B82F6"
+      },
+      "development": {
+        "description": "개발 및 코드 편집 도구",
+        "color": "#10B981"
+      },
+      "ui": {
+        "description": "UI/UX 디자인 도구",
+        "color": "#8B5CF6"
+      },
+      "testing": {
+        "description": "테스트 및 품질 보증 도구",
+        "color": "#F59E0B"
+      },
+      "system": {
+        "description": "시스템 및 파일 관리 도구",
+        "color": "#6B7280"
+      },
+      "integration": {
+        "description": "외부 서비스 연동 도구",
+        "color": "#EF4444"
+      }
+    }
+  }
+}

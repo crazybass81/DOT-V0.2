@@ -1,0 +1,93 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# DOT Platform 특화
+# 개발 중 임시 파일
+/temp/
+/tmp/
+
+# 로그 파일
+*.log
+logs/
+
+# 데이터베이스 백업
+*.dump
+*.sql.backup
+
+# 환경별 설정
+.env.production
+.env.staging
+
+# 빌드 아티팩트
+dist/
+build/
+
+# 캐시
+.cache/
+.parcel-cache/
+
+# 테스트
+test-results/
+playwright-report/
+coverage/
+
+# 임시 스크립트
+debug.sh
+test.sh
+temp.*
+
+# MCP 서버 로그
+mcp-*.log
+
+# Supabase 로컬 개발
+.supabase/

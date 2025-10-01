@@ -1,0 +1,476 @@
+<mxfile host="app.diagrams.net" agent="Claude Code" version="28.2.5">
+  <diagram name="1. Owner 역할 추가" id="owner-process">
+    <mxGraphModel dx="1422" dy="794" grid="10" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title1" value="Owner 역할 추가 프로세스" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="500" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="user1" value="User&#xa;[Seeker]" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;participant=umlActor;" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="60" height="600" as="geometry" />
+        </mxCell>
+
+        <mxCell id="system1" value="System" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="100" height="600" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api1" value="국세청 API" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="550" y="100" width="100" height="600" as="geometry" />
+        </mxCell>
+
+        <mxCell id="db1" value="DB" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="800" y="100" width="100" height="600" as="geometry" />
+        </mxCell>
+
+        <mxCell id="msg1-1" value="1. 사업자등록증 제출" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontSize=12;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="220" as="sourcePoint" />
+            <mxPoint x="350" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg1-2" value="2. 검증 요청" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontSize=12;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="270" as="sourcePoint" />
+            <mxPoint x="600" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg1-3" value="3. 검증 성공" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=open;rounded=0;dashed=1;fontSize=12;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="320" as="sourcePoint" />
+            <mxPoint x="350" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg1-4" value="4. Owner 역할 추가" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="370" as="sourcePoint" />
+            <mxPoint x="850" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg1-5" value="5. 저장 완료" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=open;rounded=0;dashed=1;fontSize=12;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="850" y="420" as="sourcePoint" />
+            <mxPoint x="350" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg1-6" value="6. Owner 역할 부여됨" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=open;rounded=0;dashed=1;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="470" as="sourcePoint" />
+            <mxPoint x="130" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="result1" value="결과: [Seeker, Owner]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="550" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="doc1" value="📄 문서: 사업자등록증" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="700" y="550" width="200" height="40" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="2. Worker 역할 추가" id="worker-process">
+    <mxGraphModel dx="1422" dy="794" grid="10" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title2" value="Worker 역할 추가 프로세스" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="500" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="user2" value="User&#xa;[Seeker]" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;participant=umlActor;" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="60" height="600" as="geometry" />
+        </mxCell>
+
+        <mxCell id="owner2" value="Owner" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;participant=umlActor;" vertex="1" parent="1">
+          <mxGeometry x="250" y="100" width="60" height="600" as="geometry" />
+        </mxCell>
+
+        <mxCell id="system2" value="System" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="450" y="100" width="100" height="600" as="geometry" />
+        </mxCell>
+
+        <mxCell id="db2" value="DB" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="700" y="100" width="100" height="600" as="geometry" />
+        </mxCell>
+
+        <mxCell id="msg2-1" value="1. 근로계약서 작성" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontSize=12;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="220" as="sourcePoint" />
+            <mxPoint x="500" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg2-2" value="2. 계약서 전송" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontSize=12;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="270" as="sourcePoint" />
+            <mxPoint x="130" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg2-3" value="3. 서명 (동의)" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontSize=12;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="320" as="sourcePoint" />
+            <mxPoint x="500" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg2-4" value="4. 계약서 저장" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontSize=12;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="370" as="sourcePoint" />
+            <mxPoint x="750" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg2-5" value="5. Worker 역할 추가" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="420" as="sourcePoint" />
+            <mxPoint x="750" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg2-6" value="6. 저장 완료" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=open;rounded=0;dashed=1;fontSize=12;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="750" y="470" as="sourcePoint" />
+            <mxPoint x="500" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg2-7" value="7. Worker 역할 부여됨" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=open;rounded=0;dashed=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="520" as="sourcePoint" />
+            <mxPoint x="130" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="result2" value="결과: [Seeker, Worker]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="580" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="doc2" value="📄 문서: 근로계약서" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="650" y="580" width="200" height="40" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="3. Manager 역할 추가" id="manager-process">
+    <mxGraphModel dx="1422" dy="794" grid="10" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title3" value="Manager 역할 추가 프로세스 (Worker 필수)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="600" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="prereq" value="⚠️ 전제조건: Worker 역할 보유 필수" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="80" width="400" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="user3" value="Worker&#xa;[Seeker, Worker]" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;participant=umlActor;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="100" y="150" width="80" height="600" as="geometry" />
+        </mxCell>
+
+        <mxCell id="owner3" value="Owner" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;participant=umlActor;" vertex="1" parent="1">
+          <mxGeometry x="270" y="150" width="60" height="600" as="geometry" />
+        </mxCell>
+
+        <mxCell id="system3" value="System" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="470" y="150" width="100" height="600" as="geometry" />
+        </mxCell>
+
+        <mxCell id="db3" value="DB" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="720" y="150" width="100" height="600" as="geometry" />
+        </mxCell>
+
+        <mxCell id="msg3-0" value="0. Worker 역할 확인" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontSize=12;strokeColor=#666666;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="240" as="sourcePoint" />
+            <mxPoint x="520" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg3-1" value="1. 권한위임장 작성" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontSize=12;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="290" as="sourcePoint" />
+            <mxPoint x="520" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg3-2" value="2. 위임장 전송" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontSize=12;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="340" as="sourcePoint" />
+            <mxPoint x="140" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg3-3" value="3. 수락" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontSize=12;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="390" as="sourcePoint" />
+            <mxPoint x="520" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg3-4" value="4. Worker 여부 재확인" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontSize=12;strokeColor=#b85450;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="440" as="sourcePoint" />
+            <mxPoint x="770" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg3-5" value="5. Worker 확인됨" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=open;rounded=0;dashed=1;fontSize=12;strokeColor=#b85450;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="770" y="480" as="sourcePoint" />
+            <mxPoint x="520" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg3-6" value="6. Manager 역할 추가" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="530" as="sourcePoint" />
+            <mxPoint x="770" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg3-7" value="7. 저장 완료" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=open;rounded=0;dashed=1;fontSize=12;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="770" y="580" as="sourcePoint" />
+            <mxPoint x="520" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg3-8" value="8. Manager 역할 부여됨" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=open;rounded=0;dashed=1;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="630" as="sourcePoint" />
+            <mxPoint x="140" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="result3" value="결과: [Seeker, Worker, Manager]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="680" width="250" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="doc3" value="📄 문서: 권한위임장&#xa;(Worker 역할 필수)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="650" y="670" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note3" value="⚠️ Worker 역할 없으면&#xa;Manager 부여 불가" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=10;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="900" y="400" width="180" height="70" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="4. 역할 조합 매트릭스" id="combination-matrix">
+    <mxGraphModel dx="1422" dy="794" grid="10" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title4" value="가능한 역할 조합" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="30" width="600" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Column Headers -->
+        <mxCell id="header1" value="Seeker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="header2" value="Owner" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="320" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="header3" value="Worker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="440" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="header4" value="Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="560" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="header5" value="가능 여부" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="720" y="120" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="header6" value="설명" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="880" y="120" width="400" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Row 1 -->
+        <mxCell id="r1c1" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="200" y="180" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r1c2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="180" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r1c3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="180" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r1c4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="180" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r1c5" value="✅ 가능" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="720" y="180" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r1c6" value="기본 상태 (회원가입 직후)" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="880" y="180" width="400" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Row 2 -->
+        <mxCell id="r2c1" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="200" y="250" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r2c2" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="320" y="250" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r2c3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="250" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r2c4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="250" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r2c5" value="✅ 가능" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="720" y="250" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r2c6" value="사업자등록증 제출" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="880" y="250" width="400" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Row 3 -->
+        <mxCell id="r3c1" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="200" y="320" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r3c2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="320" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r3c3" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="440" y="320" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r3c4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="320" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r3c5" value="✅ 가능" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="720" y="320" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r3c6" value="근로계약서 체결" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="880" y="320" width="400" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Row 4 -->
+        <mxCell id="r4c1" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="200" y="390" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r4c2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="390" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r4c3" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="440" y="390" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r4c4" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="560" y="390" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r4c5" value="✅ 가능" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="720" y="390" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r4c6" value="Worker 후 권한위임장 수령" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="880" y="390" width="400" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Row 5 -->
+        <mxCell id="r5c1" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="200" y="460" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r5c2" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="320" y="460" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r5c3" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="440" y="460" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r5c4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="460" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r5c5" value="✅ 가능" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="720" y="460" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r5c6" value="사업장 소유 + 다른 곳 근무" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="880" y="460" width="400" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Row 6 -->
+        <mxCell id="r6c1" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="200" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r6c2" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="320" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r6c3" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="440" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r6c4" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="560" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r6c5" value="✅ 가능" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="720" y="530" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r6c6" value="모든 역할 보유 (최대)" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="880" y="530" width="400" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Row 7 - Invalid -->
+        <mxCell id="r7c1" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="200" y="600" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r7c2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="600" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r7c3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="600" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r7c4" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="560" y="600" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r7c5" value="❌ 불가" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="720" y="600" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r7c6" value="⚠️ Worker 없이 Manager 불가!" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="880" y="600" width="400" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Row 8 - Invalid -->
+        <mxCell id="r8c1" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="200" y="670" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r8c2" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="320" y="670" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r8c3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="670" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r8c4" value="✓" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="560" y="670" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r8c5" value="❌ 불가" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="720" y="670" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r8c6" value="⚠️ Worker 없이 Manager 불가!" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="880" y="670" width="400" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Summary -->
+        <mxCell id="summary" value="핵심: Manager는 반드시 Worker 역할이 선행되어야 함" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="780" width="1080" height="60" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

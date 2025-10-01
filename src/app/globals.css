@@ -1,0 +1,146 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* 플랫폼 전역 스타일 */
+:root {
+  --platform-primary: theme('colors.primary.600');
+  --platform-bg: theme('colors.platform.bg');
+  --platform-surface: theme('colors.platform.surface');
+  --platform-border: theme('colors.platform.border');
+  --platform-text: theme('colors.platform.text');
+  --platform-text-muted: theme('colors.platform.text-muted');
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--platform-bg);
+  color: var(--platform-text);
+}
+
+/* 플랫폼 기본 레이아웃 */
+#platform-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 스크롤바 스타일링 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* 로딩 애니메이션 */
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.loading-pulse {
+  animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 플랫폼 컴포넌트 베이스 스타일 */
+.platform-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.platform-card {
+  @apply bg-platform-surface border border-platform-border rounded-lg shadow-platform;
+}
+
+.platform-button {
+  @apply inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200;
+}
+
+.platform-button-secondary {
+  @apply inline-flex items-center justify-center px-4 py-2 border border-platform-border text-sm font-medium rounded-md text-platform-text bg-platform-surface hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200;
+}
+
+.platform-input {
+  @apply block w-full px-3 py-2 border border-platform-border rounded-md placeholder-platform-text-muted focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200;
+}
+
+/* 앱 컨테이너 스타일 */
+.app-container {
+  @apply flex-1 bg-app-bg border border-app-border rounded-lg shadow-app overflow-hidden;
+}
+
+.app-loading {
+  @apply flex items-center justify-center h-64 text-platform-text-muted;
+}
+
+.app-error {
+  @apply flex flex-col items-center justify-center h-64 text-red-600 bg-red-50 border border-red-200 rounded-lg;
+}
+
+/* 반응형 유틸리티 */
+@media (max-width: 640px) {
+  .platform-container {
+    @apply px-2;
+  }
+}
+
+/* 다크모드 지원 (향후 구현) */
+@media (prefers-color-scheme: dark) {
+  /* 다크모드 스타일은 향후 구현 예정 */
+}
+
+/* 접근성 개선 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 포커스 표시 개선 */
+.focus-visible:focus {
+  outline: 2px solid var(--platform-primary);
+  outline-offset: 2px;
+}
+
+/* 애니메이션 비활성화 설정 존중 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
